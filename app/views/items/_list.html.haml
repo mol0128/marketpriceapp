@@ -1,5 +1,8 @@
 - if @items.present?
-  - @items.first(20).each do |item|
+  - @items.each do |item|
     = image_tag item['mediumImageUrls'][0]
     = link_to item.name, item['itemUrl']
+    %br/
     = item.price
+    %hr/
+  = paginate @items
