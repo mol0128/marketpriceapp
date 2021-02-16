@@ -1,0 +1,5 @@
+- if @items.present?
+  - @items.first(20).each do |item|
+    = image_tag item['mediumImageUrls'][0]
+    = link_to item.name, item['itemUrl']
+    = item.price

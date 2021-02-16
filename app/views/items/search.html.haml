@@ -1,0 +1,6 @@
+= form_with url:items_search_path, method: :get, local: true do |f|
+  = f.text_field :keyword, placeholder: "型番を入力してください", autocomplete: 'off'
+  = f.submit "検索" , :name => nil
+%h2
+  検索結果
+= render partial: 'list'
