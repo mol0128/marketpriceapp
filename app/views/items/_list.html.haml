@@ -1,8 +1,9 @@
 - if @items.present?
   - @items.each do |item|
-    = image_tag item['mediumImageUrls'][0]
-    = link_to item.name, item['itemUrl']
-    %br/
-    = item.price
+    .result
+      = image_tag item['mediumImageUrls'][0]
+      = link_to item.name, item['itemUrl']
+    .price
+      = item.price
     %hr/
   = paginate @items
