@@ -3,5 +3,6 @@
   = f.submit "検索" , :name => nil
 %h2
   検索結果
-  = @items.total_count
+  -# - if @items.present?
+  -#   = @items.total_count
 = render partial: 'list'
