@@ -31,12 +31,15 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'erb2haml'
 gem 'haml-rails'
 gem 'devise'
+gem 'rakuten_web_service'
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-byebug'
   gem 'rubocop-rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
