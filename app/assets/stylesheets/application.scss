@@ -1,6 +1,7 @@
 @import 'header';
 @import 'home';
 @import 'item';
+@import 'footer';
 
 html {
   word-spacing: 1px;
@@ -31,4 +32,10 @@ a {
 .container {
   padding: 16px 16px;
   width: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
