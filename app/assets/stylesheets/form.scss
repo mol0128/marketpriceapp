@@ -1,0 +1,23 @@
+input, select {
+  &.text {
+    width: 100%;
+    margin: 8px 0px;
+    padding: 16px 24px;
+    border: 1px solid #999;
+    background-color: #fff;
+  }
+}
+
+label {
+  font-size: 12px;
+}
+
+.btn-primary {
+  background-color: rgb(188, 209, 229);
+  border: none;
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 16px 0;
+  font-weight: bold;
+}

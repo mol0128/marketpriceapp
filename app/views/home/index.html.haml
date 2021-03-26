@@ -1,5 +1,28 @@
-- if user_signed_in?
-  = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
-- else
-  = link_to '新規登録', new_user_registration_path
-  = link_to 'ログイン', new_user_session_path
+.top_image
+  = image_tag '時計.jpg'
+.container
+  .toppage
+    .toppage_login_btn
+      - if user_signed_in?
+        .marketpage_link_btm
+          =link_to '相場を検索する', items_search_path
+      - else
+        .login_btn
+          = link_to '新規登録', new_user_registration_path
+          = link_to 'ログイン', new_user_session_path
+        .marketpage_link_btm
+          =link_to '相場を検索する', items_search_path
+
+  .desc
+    %h3
+      %i.fa.fa-lightbulb-o{"aria-hidden" => "true"}
+      検索結果の見方
+    %p
+      楽天市場のデータを参照しております。
+      %br/
+      実際の売却相場は楽天販売価格×0.6前後です。
+      買取相場は楽天販売価格×0.4〜0.5となることが多いです。
+      %br/
+      ex) 楽天販売価格100,000円
+      %br/
+      ⇒　買取相場40,000〜50,000円

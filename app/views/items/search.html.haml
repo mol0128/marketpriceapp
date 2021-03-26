@@ -1,8 +1,13 @@
-= form_with url:items_search_path, method: :get, local: true do |f|
-  = f.text_field :keyword, placeholder: "型番を入力してください", autocomplete: 'off'
-  = f.submit "検索" , :name => nil
-%h2
-  検索結果
-  -# - if @items.present?
-  -#   = @items.total_count
-= render partial: 'list'
+.container
+  .search_container
+    = form_with url:items_search_path, method: :get, local: true do |f|
+      = f.text_field :keyword, placeholder: "型番を入力してください", autocomplete: 'off'
+      = f.submit "検索" , :name => nil
+      %i.fa.fa-search{"aria-hidden" => "true"}
+  %p.ex
+    ex)  ヴィトン M41428
+  %h3.result_title
+    検索結果
+    -# - if @items.present?
+    -#   = @items.total_count
+  = render partial: 'list'
