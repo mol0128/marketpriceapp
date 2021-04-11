@@ -1,0 +1,16 @@
+{
+  "name": "marketprice app",
+  "description": "This is marketpriceapp",
+  "keywords": [],
+  "website": "",
+  "repository": "https://github.com/mol0128/marketpriceapp",
+  "env": {},
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "buildpacks": [{
+    "url": "heroku/nodejs"
+  }, {
+    "url": "heroku/ruby"
+  }]
+}
