@@ -4,6 +4,11 @@
       = image_tag item['mediumImageUrls'][0]
       = link_to item.name, item['itemUrl']
     .price
-      = item.price
+      楽天販売価格
+      = "#{item.price.to_s(:delimited, delimiter: ',')}円"
+      .reprice
+        売却見込価格
+        - reprice = item.price * 0.6
+        = "#{reprice.ceil.to_s(:delimited, delimiter: ',')}円"
     %hr/
   = paginate @items

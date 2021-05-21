@@ -5,10 +5,15 @@
 }
 
 .price {
-  padding-left: 30px;
-  padding-bottom: 10px;
+  // padding-left: 30px;
+  // padding-bottom: 10px;
+  text-align: center;
   font-weight: bold;
   color: red;
+}
+
+.reprice {
+  color: blue;
 }
 
 .search_container {
